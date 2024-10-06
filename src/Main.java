@@ -10,7 +10,7 @@ public class Main {
         };  
 
         int[] characterDelays = {100, 100, 90, 100, 90, 100}; // Custom delays for each character in each line  
-        int[] lineDelays = {1200, 1500, 2400, 400, 2400, 1000}; // Custom delays for each line  
+        int[] lineDelays = {1200, 1800, 2400, 400, 2800, 1000}; // Custom delays for each line  
         typeWriter(lyrics, characterDelays, lineDelays);  
     }  
 
