@@ -9,8 +9,8 @@ public class Main {
             "kalau bisa jangan ada dulu" 
         };  
 
-        int[] characterDelays = {100, 100, 90, 100, 90, 100}; // Custom delays for each character in each line  
-        int[] lineDelays = {1200, 1800, 2400, 400, 2800, 1000}; // Custom delays for each line  
+        int[] characterDelays = {100, 100, 90, 100, 90, 100}; // Laju efek typewriter lirik (milidetik)  
+        int[] lineDelays = {1200, 1800, 2400, 400, 2800, 1000}; // Jeda antar baris (dihitung setelah, milidetik) 
         typeWriter(lyrics, characterDelays, lineDelays);  
     }  
 
@@ -21,14 +21,14 @@ public class Main {
                 char ch = line.charAt(j);  
                 System.out.print(ch);  
                 try {  
-                    Thread.sleep(characterDelays[i]); // Delay for each character based on the line's character delay  
+                    Thread.sleep(characterDelays[i]); // Jeda tiap karakter bedasarkan jeda huruf pada baris  
                 } catch (InterruptedException e) {  
                     e.printStackTrace();  
                 }  
             }  
-            System.out.println(); // Move to the next line  
+            System.out.println(); // Lanjut baris berikutnya 
             try {  
-                Thread.sleep(lineDelays[i]); // Delay after each line  
+                Thread.sleep(lineDelays[i]); // Jeda tiap baris  
             } catch (InterruptedException e) {  
                 e.printStackTrace();  
             }  
